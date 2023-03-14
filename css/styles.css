@@ -1,0 +1,89 @@
+
+:root {
+    --black: #212121;
+    --red: #c0232a;
+    --box-shadow: 0 0 10px 0 rgb(33 33 33 / 15%);
+}
+
+
+/* Typography */
+body {
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2, h3 {
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Utility Classes */
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-container {
+    max-width: 960px;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.info {
+    margin: auto;
+    max-width: 80ch;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.info p { font-size: 1.125rem; }
+
+/** card layout **/
+.card {
+    border-radius: 0.3125rem;
+    box-shadow: var(--box-shadow);
+    margin: 1rem 0.5rem;
+}
+
+.card picture,
+.card source {
+    max-width: 100%;;
+}
+
+/** target the picture element to round the corners, it won't really affect anything, but it is required to hold the source tag and image elements **/
+.card source,
+.card img {
+    border-radius: 0.3125rem 0.3125rem 0 0;
+}
+
+
+.card-body { padding: 1rem; }
+.card h3 { 
+    font-size: 1.125rem;
+}
+
+/* Media Query */
+@media screen and (min-width: 720px) {
+    .wide-flex {
+        align-items: center;
+        display: flex;
+    }
+
+    .card {
+        max-height: 12rem;
+    }
+    
+    .card-body {
+        flex: 2;
+    }
+
+
+    .card source,
+    .card img {
+        max-height: 12rem;
+        border-radius: .3125rem 0 0 .3125rem;
+    }
+
+}
